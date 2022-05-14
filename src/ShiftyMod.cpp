@@ -450,6 +450,7 @@ struct ShiftyModWidget : ModuleWidget {
 		Module* module = model->createModule();
 		APP->engine->addModule(module);
 		
+		#undef ModuleWidget
 		ModuleWidget *moduleWidget = model->createModuleWidget(module);
 	 	APP->scene->rack->setModulePosForce(moduleWidget, expanderPos);
 	 	APP->scene->rack->addModule(moduleWidget);
